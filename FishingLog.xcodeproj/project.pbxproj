@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00A975FBDE7FD393B003467F /* NewSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1351E38874AE4432FBF0EC4D /* NewSpotView.swift */; };
+		0333E33FA6171C66B7F8B002 /* EquipmentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C02F5CB6E51118D84AEB5 /* EquipmentAPI.swift */; };
+		0401DB7934EC00A2D2662A83 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88F3E1DAC06729C2D09D476 /* SyncManager.swift */; };
+		04EE7701A09FBC04E6D84F24 /* SpotListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B1CA938280FEF49B36584A /* SpotListView.swift */; };
+		087F7A954F0CCF62038175DE /* TripMediaGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD64D01AB1DC065A01030942 /* TripMediaGridView.swift */; };
+		08959320133B7A68F9B43CF6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 580D7EB210C4FB964A3DCDE8 /* Config.plist */; };
+		0C6C5CD026F1F7794B4C7D46 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78972CCAF7FF8590951F5401 /* SpotsView.swift */; };
+		0EC92E40759ADCF767813F6C /* SpotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD4B77A5B75813167B6ED9 /* SpotsViewModel.swift */; };
+		1BF19036720541839F140F5A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0135151B67E48A7896C835 /* StatsView.swift */; };
+		20BAB6065CC1DF7231BA9111 /* SeasonalChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD015C24F31E7C4C7D925D8 /* SeasonalChartView.swift */; };
+		309D7792E367496377C91A12 /* SyncBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC43310E92D9F09C632ADA /* SyncBadge.swift */; };
+		32778AF02CF02406C436F609 /* SpotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35A579F5B95FA93952B84A /* SpotAPI.swift */; };
+		3D06B2731EE274DD9422F2FE /* FLCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DADBD9E49EB0BDB11F73B6 /* FLCard.swift */; };
+		3DE58D00BA252DA766AD3B3B /* FLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB71387CAABB53B04AE745 /* FLButton.swift */; };
+		3F8A54856E6132B632C346DF /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D75667A0BA30232C437B3 /* MediaModel.swift */; };
+		44A0500ED157D80C85C68A64 /* Step2CatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BB5A06B07F8A749BCABD05 /* Step2CatchesView.swift */; };
+		4655F31E37DB485DADCF5A4B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED1FC4D70172B6C40BA59F /* APIError.swift */; };
+		49E92ABE571639C81A27A6EE /* SpotMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89251233BC69CFA7B1DE4B42 /* SpotMapView.swift */; };
+		4A6367864F25A22FB891649D /* NewEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D37DC9AB5E35EBC913C739 /* NewEquipmentView.swift */; };
+		4F4D7EA557BABDDE30863672 /* Step1BasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A65FBD59B5989E853AE9FF /* Step1BasicInfoView.swift */; };
+		5200B9B5CD3808026A9F92B0 /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688F8CC7692A203E58C3B0A1 /* EquipmentModel.swift */; };
+		587AF62E691CCCC457E9EECB /* GearListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081294B8B66E1EC6FA37BA2 /* GearListView.swift */; };
+		5EC7EBAD64F03008D184B48C /* FishingLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */; };
+		60B56DAAE4043A533BD45C48 /* OverviewCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFF32A5367E33CCA55D129 /* OverviewCardsView.swift */; };
+		6504B0DA965ACF9ADA853648 /* SpotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EFE528651543AFC902150 /* SpotCardView.swift */; };
+		6553D3D84BD5F530A53F4F9A /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF86BDC609017897DB71EE /* StatsViewModel.swift */; };
+		660B4F83ED0981C4E5C44977 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183D07DD8781B47BADCFB59 /* TripDetailView.swift */; };
+		6902B24A81B48460AEBB59F2 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E04285FF7F2E28329C6EEF /* AboutView.swift */; };
+		6D134F75DBF73CC02DFC3B6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A27D6290FB093C1513AF3 /* LoginView.swift */; };
+		713732C7F99B10BA661BFB36 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B64CA67E93659C776A4BF /* APIClient.swift */; };
+		7147ED3CD95E5860EEAB0EE2 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF415E86D94960840134AE7D /* KeychainManager.swift */; };
+		77713072187D359A14A45D64 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8EAB964BA74D4016FE69BB9A /* Alamofire */; };
+		8A020D795858B834CB0731CF /* SpotAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E4EC697B0BE231D3266AF /* SpotAnnotationView.swift */; };
+		8D518C3DB281CE3DC093DE3C /* Step3EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A8E65EA4D4BAFC3F7A205 /* Step3EquipmentView.swift */; };
+		8F9F0EA2D036C97C896380C0 /* MediaUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE70A18A98FC48F91729A9 /* MediaUploadManager.swift */; };
+		8FE0B7295C248939628F815E /* EditEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66884168D4B025985750EA3D /* EditEquipmentView.swift */; };
+		924B5D4BFC61C48C5C664559 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC4F533429A2FC90138CE42 /* ContentView.swift */; };
+		979885ABD72D7F493B121025 /* SpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E4BB63CC456E08E3AB7B /* SpotModel.swift */; };
+		9BD8DCB836750DCEE1B8BF04 /* Step4SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEBD5C84316ABFF84B2D85 /* Step4SummaryView.swift */; };
+		9CE29C07D17838C3D5260D93 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CB8407BBC04342B817910 /* TripModel.swift */; };
+		A3A785E1B358C1046A233313 /* MediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355173357416086E50AE7ACE /* MediaAPI.swift */; };
+		A4ECD50F86E8F58C8C8BE1C3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4F41874F57DA025F7F348A /* ProfileView.swift */; };
+		AB5288AF423C73CD12D184C9 /* TripsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5741C6B8C870EAB6444E690 /* TripsListViewModel.swift */; };
+		AC4A6701DD9186D24EF01546 /* SpeciesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D10CEFA594F675A1D1E471 /* SpeciesChartView.swift */; };
+		AFB75CEC042381F29C32E6B6 /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097966B3BDB1489F1E8ED39C /* TripCardView.swift */; };
+		B47F9F9BB9D7619EACC38059 /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE3425E4BF134F602A9814 /* FullScreenImageView.swift */; };
+		BAAFBDADA0E3A2E72C005C79 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F97FF9A588AA8EC5FB0EFF /* ProfileViewModel.swift */; };
+		BD0064F0C1068A7F26229D5C /* GearCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F41AE557CE2EBCCFE881AA /* GearCardView.swift */; };
+		C3288838B5A817D072B790D8 /* TopCatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535048767A1E54BADFB10930 /* TopCatchListView.swift */; };
+		C3B3501A299B3DCACDF42D1B /* TripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF2ACA74D1BAE3F52E8AD3 /* TripAPI.swift */; };
+		C65B37AE4ED25734A5C73ABA /* NewTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C749E48993DE788E26F677 /* NewTripView.swift */; };
+		C8307052FA82D493A501EE0E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF85076454595C0D0C11F /* MainTabView.swift */; };
+		D0A8E0CA8AC94BC777AC3A3F /* FishingLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9CB6A1657E55A389D95F4 /* FishingLogApp.swift */; };
+		D2D30912211377DC9E380548 /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58B439378F0D9EF3D0BB91 /* TripsListView.swift */; };
+		D49C55491D006DC232B2F257 /* NewTripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */; };
+		D565E7B74148038C62520D66 /* GearListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965B467F1DE9BECD209D684 /* GearListViewModel.swift */; };
+		D800D883592D7E6CCEE65F69 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD15D0933A1258FEDEBBC0 /* AuthManager.swift */; };
+		DC21C8C3951427E7A9BA1528 /* TripDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961AF7A1CA9962829F4EC38B /* TripDetailViewModel.swift */; };
+		DE79056C435E926568BA6D81 /* StatsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D8F0FD101A873611EC40C /* StatsAPI.swift */; };
+		E3968DDF3204C337B3D585A5 /* FLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944ACBDFC0DB148E2DEB8300 /* FLTextField.swift */; };
+		EDEE42C754FA9A9BCC4567DB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E2C555DDC98439FB9968F /* Typography.swift */; };
+		F0E55ABE24EE4648E8805B0D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E520DD9CF4389B742DC150 /* Colors.swift */; };
+		F10BEE616B4DE13DA5D02565 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF59783844A5CC98F588EB1 /* SettingsView.swift */; };
+		F826D0D85C126AE5886E61D1 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CDECCB7C4B0C0E9D845BC /* StatsModel.swift */; };
+		FF778D076AC5CBC6A522C0BF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D922D72212FC7CE0F8DF561E /* CoreDataManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00C749E48993DE788E26F677 /* NewTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripView.swift; sourceTree = "<group>"; };
+		0965B467F1DE9BECD209D684 /* GearListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearListViewModel.swift; sourceTree = "<group>"; };
+		097966B3BDB1489F1E8ED39C /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
+		1351E38874AE4432FBF0EC4D /* NewSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotView.swift; sourceTree = "<group>"; };
+		14F41AE557CE2EBCCFE881AA /* GearCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearCardView.swift; sourceTree = "<group>"; };
+		18EAF85076454595C0D0C11F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		1A0135151B67E48A7896C835 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		1F20E4BB63CC456E08E3AB7B /* SpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotModel.swift; sourceTree = "<group>"; };
+		226E4EC697B0BE231D3266AF /* SpotAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAnnotationView.swift; sourceTree = "<group>"; };
+		22A65FBD59B5989E853AE9FF /* Step1BasicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1BasicInfoView.swift; sourceTree = "<group>"; };
+		286D75667A0BA30232C437B3 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		2B4E2C555DDC98439FB9968F /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		2EF59783844A5CC98F588EB1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		355173357416086E50AE7ACE /* MediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAPI.swift; sourceTree = "<group>"; };
+		3BCD15D0933A1258FEDEBBC0 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		4BD015C24F31E7C4C7D925D8 /* SeasonalChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonalChartView.swift; sourceTree = "<group>"; };
+		535048767A1E54BADFB10930 /* TopCatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCatchListView.swift; sourceTree = "<group>"; };
+		57D37DC9AB5E35EBC913C739 /* NewEquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEquipmentView.swift; sourceTree = "<group>"; };
+		580D7EB210C4FB964A3DCDE8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Config.plist; sourceTree = "<group>"; };
+		5F4F41874F57DA025F7F348A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		66884168D4B025985750EA3D /* EditEquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEquipmentView.swift; sourceTree = "<group>"; };
+		67BB5A06B07F8A749BCABD05 /* Step2CatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2CatchesView.swift; sourceTree = "<group>"; };
+		688F8CC7692A203E58C3B0A1 /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		69EF86BDC609017897DB71EE /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		71B1CA938280FEF49B36584A /* SpotListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListView.swift; sourceTree = "<group>"; };
+		72D10CEFA594F675A1D1E471 /* SpeciesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesChartView.swift; sourceTree = "<group>"; };
+		74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewModel.swift; sourceTree = "<group>"; };
+		74EE70A18A98FC48F91729A9 /* MediaUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaUploadManager.swift; sourceTree = "<group>"; };
+		76E04285FF7F2E28329C6EEF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		78972CCAF7FF8590951F5401 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsView.swift; sourceTree = "<group>"; };
+		7C58B439378F0D9EF3D0BB91 /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
+		88CE3425E4BF134F602A9814 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
+		89251233BC69CFA7B1DE4B42 /* SpotMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMapView.swift; sourceTree = "<group>"; };
+		89ED1FC4D70172B6C40BA59F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		944ACBDFC0DB148E2DEB8300 /* FLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTextField.swift; sourceTree = "<group>"; };
+		961AF7A1CA9962829F4EC38B /* TripDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewModel.swift; sourceTree = "<group>"; };
+		96AB71387CAABB53B04AE745 /* FLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLButton.swift; sourceTree = "<group>"; };
+		978B64CA67E93659C776A4BF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9A4CB8407BBC04342B817910 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		9D991AACECAF4E5D86BEB300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9EFFF32A5367E33CCA55D129 /* OverviewCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardsView.swift; sourceTree = "<group>"; };
+		9F4C02F5CB6E51118D84AEB5 /* EquipmentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentAPI.swift; sourceTree = "<group>"; };
+		A8E520DD9CF4389B742DC150 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A8F9CB6A1657E55A389D95F4 /* FishingLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLogApp.swift; sourceTree = "<group>"; };
+		AA07792FD6FDFCC59B9B7B6C /* FishingLog.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FishingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF35A579F5B95FA93952B84A /* SpotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAPI.swift; sourceTree = "<group>"; };
+		B081294B8B66E1EC6FA37BA2 /* GearListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearListView.swift; sourceTree = "<group>"; };
+		BC1EFE528651543AFC902150 /* SpotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCardView.swift; sourceTree = "<group>"; };
+		C0A1025A0878BE6413BDCA7D /* FishingLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FishingLog.xcdatamodel; sourceTree = "<group>"; };
+		C2DADBD9E49EB0BDB11F73B6 /* FLCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLCard.swift; sourceTree = "<group>"; };
+		C3FF2ACA74D1BAE3F52E8AD3 /* TripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAPI.swift; sourceTree = "<group>"; };
+		C49D8F0FD101A873611EC40C /* StatsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsAPI.swift; sourceTree = "<group>"; };
+		C5741C6B8C870EAB6444E690 /* TripsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewModel.swift; sourceTree = "<group>"; };
+		D12A27D6290FB093C1513AF3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D922D72212FC7CE0F8DF561E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DCC4F533429A2FC90138CE42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF415E86D94960840134AE7D /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		E07A8E65EA4D4BAFC3F7A205 /* Step3EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3EquipmentView.swift; sourceTree = "<group>"; };
+		E183D07DD8781B47BADCFB59 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		E88F3E1DAC06729C2D09D476 /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		F1AC43310E92D9F09C632ADA /* SyncBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncBadge.swift; sourceTree = "<group>"; };
+		F23CDECCB7C4B0C0E9D845BC /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		F9F97FF9A588AA8EC5FB0EFF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F9FD4B77A5B75813167B6ED9 /* SpotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsViewModel.swift; sourceTree = "<group>"; };
+		FCCEBD5C84316ABFF84B2D85 /* Step4SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4SummaryView.swift; sourceTree = "<group>"; };
+		FD64D01AB1DC065A01030942 /* TripMediaGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMediaGridView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8E2B536F3C7850B7C4636D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77713072187D359A14A45D64 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39DBF9745E63586E13AD6B23 /* FishingLog */ = {
+			isa = PBXGroup;
+			children = (
+				F08A974EBDAB58823E1D1ADF /* App */,
+				7FC870A6864A421F0553C8F6 /* Core */,
+				B274D3235667513772B7EC2A /* DesignSystem */,
+				D9297D7A9B15CFD523C9EA24 /* Features */,
+				F5274D0F7C17D5A490EB25E1 /* Resources */,
+			);
+			path = FishingLog;
+			sourceTree = "<group>";
+		};
+		4751737DE59521FFD0FF6E5D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD64D01AB1DC065A01030942 /* TripMediaGridView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49A25AB92BA91543083E3A91 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				E88F3E1DAC06729C2D09D476 /* SyncManager.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
+		4CFB72012DD59780CA7FA9EB /* NewTrip */ = {
+			isa = PBXGroup;
+			children = (
+				00C749E48993DE788E26F677 /* NewTripView.swift */,
+				74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */,
+				22A65FBD59B5989E853AE9FF /* Step1BasicInfoView.swift */,
+				67BB5A06B07F8A749BCABD05 /* Step2CatchesView.swift */,
+				E07A8E65EA4D4BAFC3F7A205 /* Step3EquipmentView.swift */,
+				FCCEBD5C84316ABFF84B2D85 /* Step4SummaryView.swift */,
+			);
+			path = NewTrip;
+			sourceTree = "<group>";
+		};
+		4D7D2F7023FE5A0ED2A014F1 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				74EE70A18A98FC48F91729A9 /* MediaUploadManager.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		4FC75401007C759ADB2D7BED /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D922D72212FC7CE0F8DF561E /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4FD3B47875123B21475A0805 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				978B64CA67E93659C776A4BF /* APIClient.swift */,
+				89ED1FC4D70172B6C40BA59F /* APIError.swift */,
+				6270C31E98498F473198C097 /* Models */,
+				A885E7836C785967191AE1F2 /* Routes */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6270C31E98498F473198C097 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				688F8CC7692A203E58C3B0A1 /* EquipmentModel.swift */,
+				286D75667A0BA30232C437B3 /* MediaModel.swift */,
+				1F20E4BB63CC456E08E3AB7B /* SpotModel.swift */,
+				F23CDECCB7C4B0C0E9D845BC /* StatsModel.swift */,
+				9A4CB8407BBC04342B817910 /* TripModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63AA2C4887EA301CDAEFDBE9 /* Spots */ = {
+			isa = PBXGroup;
+			children = (
+				1351E38874AE4432FBF0EC4D /* NewSpotView.swift */,
+				71B1CA938280FEF49B36584A /* SpotListView.swift */,
+				89251233BC69CFA7B1DE4B42 /* SpotMapView.swift */,
+				78972CCAF7FF8590951F5401 /* SpotsView.swift */,
+				F9FD4B77A5B75813167B6ED9 /* SpotsViewModel.swift */,
+				B86AAB8C2CB4EF3635EA1326 /* Components */,
+			);
+			path = Spots;
+			sourceTree = "<group>";
+		};
+		6CFAD5528E1200FE401AE8AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA07792FD6FDFCC59B9B7B6C /* FishingLog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70B57251D6F67C812B9C1F00 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E183D07DD8781B47BADCFB59 /* TripDetailView.swift */,
+				961AF7A1CA9962829F4EC38B /* TripDetailViewModel.swift */,
+				4751737DE59521FFD0FF6E5D /* Components */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		7709718A1755D66AD45F3BAF /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				66884168D4B025985750EA3D /* EditEquipmentView.swift */,
+				B081294B8B66E1EC6FA37BA2 /* GearListView.swift */,
+				0965B467F1DE9BECD209D684 /* GearListViewModel.swift */,
+				57D37DC9AB5E35EBC913C739 /* NewEquipmentView.swift */,
+				BA863860DCE732FFA9C31BF2 /* Components */,
+			);
+			path = Equipment;
+			sourceTree = "<group>";
+		};
+		7BA7B4D3A1A42D2AD810C61D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				097966B3BDB1489F1E8ED39C /* TripCardView.swift */,
+				7C58B439378F0D9EF3D0BB91 /* TripsListView.swift */,
+				C5741C6B8C870EAB6444E690 /* TripsListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		7BC2B9B5A689A15437548A28 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				76E04285FF7F2E28329C6EEF /* AboutView.swift */,
+				5F4F41874F57DA025F7F348A /* ProfileView.swift */,
+				F9F97FF9A588AA8EC5FB0EFF /* ProfileViewModel.swift */,
+				2EF59783844A5CC98F588EB1 /* SettingsView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7FC870A6864A421F0553C8F6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C654748C72928A767AFAC6A0 /* Auth */,
+				4FC75401007C759ADB2D7BED /* CoreData */,
+				4D7D2F7023FE5A0ED2A014F1 /* Media */,
+				4FD3B47875123B21475A0805 /* Network */,
+				49A25AB92BA91543083E3A91 /* Sync */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8A3DC8EF0452E5B6EAD451AF /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				70B57251D6F67C812B9C1F00 /* Detail */,
+				7BA7B4D3A1A42D2AD810C61D /* List */,
+				4CFB72012DD59780CA7FA9EB /* NewTrip */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		A885E7836C785967191AE1F2 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C02F5CB6E51118D84AEB5 /* EquipmentAPI.swift */,
+				355173357416086E50AE7ACE /* MediaAPI.swift */,
+				AF35A579F5B95FA93952B84A /* SpotAPI.swift */,
+				C49D8F0FD101A873611EC40C /* StatsAPI.swift */,
+				C3FF2ACA74D1BAE3F52E8AD3 /* TripAPI.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		AE7DB46984E5271724BD162F = {
+			isa = PBXGroup;
+			children = (
+				39DBF9745E63586E13AD6B23 /* FishingLog */,
+				6CFAD5528E1200FE401AE8AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B274D3235667513772B7EC2A /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A8E520DD9CF4389B742DC150 /* Colors.swift */,
+				2B4E2C555DDC98439FB9968F /* Typography.swift */,
+				C7A1D701A82A03F3D5D8DD6E /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		B86AAB8C2CB4EF3635EA1326 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				226E4EC697B0BE231D3266AF /* SpotAnnotationView.swift */,
+				BC1EFE528651543AFC902150 /* SpotCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BA863860DCE732FFA9C31BF2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				14F41AE557CE2EBCCFE881AA /* GearCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C1D5A0CF7EEDA72549F0D799 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9EFFF32A5367E33CCA55D129 /* OverviewCardsView.swift */,
+				4BD015C24F31E7C4C7D925D8 /* SeasonalChartView.swift */,
+				72D10CEFA594F675A1D1E471 /* SpeciesChartView.swift */,
+				535048767A1E54BADFB10930 /* TopCatchListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C654748C72928A767AFAC6A0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3BCD15D0933A1258FEDEBBC0 /* AuthManager.swift */,
+				DF415E86D94960840134AE7D /* KeychainManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C7A1D701A82A03F3D5D8DD6E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				96AB71387CAABB53B04AE745 /* FLButton.swift */,
+				C2DADBD9E49EB0BDB11F73B6 /* FLCard.swift */,
+				944ACBDFC0DB148E2DEB8300 /* FLTextField.swift */,
+				F1AC43310E92D9F09C632ADA /* SyncBadge.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C9B4E135668BBBC7DC901134 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				1A0135151B67E48A7896C835 /* StatsView.swift */,
+				69EF86BDC609017897DB71EE /* StatsViewModel.swift */,
+				C1D5A0CF7EEDA72549F0D799 /* Components */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		D9297D7A9B15CFD523C9EA24 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F984FD33C8408BFA9B37325A /* Auth */,
+				7709718A1755D66AD45F3BAF /* Equipment */,
+				DB773EE40D1DCB73F1076A94 /* Media */,
+				7BC2B9B5A689A15437548A28 /* Profile */,
+				63AA2C4887EA301CDAEFDBE9 /* Spots */,
+				C9B4E135668BBBC7DC901134 /* Stats */,
+				8A3DC8EF0452E5B6EAD451AF /* Trips */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DB773EE40D1DCB73F1076A94 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				88CE3425E4BF134F602A9814 /* FullScreenImageView.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		F08A974EBDAB58823E1D1ADF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DCC4F533429A2FC90138CE42 /* ContentView.swift */,
+				A8F9CB6A1657E55A389D95F4 /* FishingLogApp.swift */,
+				18EAF85076454595C0D0C11F /* MainTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F5274D0F7C17D5A490EB25E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				580D7EB210C4FB964A3DCDE8 /* Config.plist */,
+				378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */,
+				9D991AACECAF4E5D86BEB300 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F984FD33C8408BFA9B37325A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D12A27D6290FB093C1513AF3 /* LoginView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6B3EC128A73CA974549E806 /* FishingLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53D4769F21990CF9D96D8E1F /* Build configuration list for PBXNativeTarget "FishingLog" */;
+			buildPhases = (
+				323E4FF4E707368502769889 /* Sources */,
+				8E3078C00A8FCEE791B49D84 /* Resources */,
+				D8E2B536F3C7850B7C4636D2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FishingLog;
+			packageProductDependencies = (
+				8EAB964BA74D4016FE69BB9A /* Alamofire */,
+			);
+			productName = FishingLog;
+			productReference = AA07792FD6FDFCC59B9B7B6C /* FishingLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D9F7BC5068FF456E73C7DD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					C6B3EC128A73CA974549E806 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 2F115732D695AD029FCCDCBF /* Build configuration list for PBXProject "FishingLog" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = AE7DB46984E5271724BD162F;
+			packageReferences = (
+				9D7802A4CE987FD636FCD810 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6B3EC128A73CA974549E806 /* FishingLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E3078C00A8FCEE791B49D84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08959320133B7A68F9B43CF6 /* Config.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		323E4FF4E707368502769889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713732C7F99B10BA661BFB36 /* APIClient.swift in Sources */,
+				4655F31E37DB485DADCF5A4B /* APIError.swift in Sources */,
+				6902B24A81B48460AEBB59F2 /* AboutView.swift in Sources */,
+				D800D883592D7E6CCEE65F69 /* AuthManager.swift in Sources */,
+				F0E55ABE24EE4648E8805B0D /* Colors.swift in Sources */,
+				924B5D4BFC61C48C5C664559 /* ContentView.swift in Sources */,
+				FF778D076AC5CBC6A522C0BF /* CoreDataManager.swift in Sources */,
+				8FE0B7295C248939628F815E /* EditEquipmentView.swift in Sources */,
+				0333E33FA6171C66B7F8B002 /* EquipmentAPI.swift in Sources */,
+				5200B9B5CD3808026A9F92B0 /* EquipmentModel.swift in Sources */,
+				3DE58D00BA252DA766AD3B3B /* FLButton.swift in Sources */,
+				3D06B2731EE274DD9422F2FE /* FLCard.swift in Sources */,
+				E3968DDF3204C337B3D585A5 /* FLTextField.swift in Sources */,
+				5EC7EBAD64F03008D184B48C /* FishingLog.xcdatamodeld in Sources */,
+				D0A8E0CA8AC94BC777AC3A3F /* FishingLogApp.swift in Sources */,
+				B47F9F9BB9D7619EACC38059 /* FullScreenImageView.swift in Sources */,
+				BD0064F0C1068A7F26229D5C /* GearCardView.swift in Sources */,
+				587AF62E691CCCC457E9EECB /* GearListView.swift in Sources */,
+				D565E7B74148038C62520D66 /* GearListViewModel.swift in Sources */,
+				7147ED3CD95E5860EEAB0EE2 /* KeychainManager.swift in Sources */,
+				6D134F75DBF73CC02DFC3B6B /* LoginView.swift in Sources */,
+				C8307052FA82D493A501EE0E /* MainTabView.swift in Sources */,
+				A3A785E1B358C1046A233313 /* MediaAPI.swift in Sources */,
+				3F8A54856E6132B632C346DF /* MediaModel.swift in Sources */,
+				8F9F0EA2D036C97C896380C0 /* MediaUploadManager.swift in Sources */,
+				4A6367864F25A22FB891649D /* NewEquipmentView.swift in Sources */,
+				00A975FBDE7FD393B003467F /* NewSpotView.swift in Sources */,
+				C65B37AE4ED25734A5C73ABA /* NewTripView.swift in Sources */,
+				D49C55491D006DC232B2F257 /* NewTripViewModel.swift in Sources */,
+				60B56DAAE4043A533BD45C48 /* OverviewCardsView.swift in Sources */,
+				A4ECD50F86E8F58C8C8BE1C3 /* ProfileView.swift in Sources */,
+				BAAFBDADA0E3A2E72C005C79 /* ProfileViewModel.swift in Sources */,
+				20BAB6065CC1DF7231BA9111 /* SeasonalChartView.swift in Sources */,
+				F10BEE616B4DE13DA5D02565 /* SettingsView.swift in Sources */,
+				AC4A6701DD9186D24EF01546 /* SpeciesChartView.swift in Sources */,
+				32778AF02CF02406C436F609 /* SpotAPI.swift in Sources */,
+				8A020D795858B834CB0731CF /* SpotAnnotationView.swift in Sources */,
+				6504B0DA965ACF9ADA853648 /* SpotCardView.swift in Sources */,
+				04EE7701A09FBC04E6D84F24 /* SpotListView.swift in Sources */,
+				49E92ABE571639C81A27A6EE /* SpotMapView.swift in Sources */,
+				979885ABD72D7F493B121025 /* SpotModel.swift in Sources */,
+				0C6C5CD026F1F7794B4C7D46 /* SpotsView.swift in Sources */,
+				0EC92E40759ADCF767813F6C /* SpotsViewModel.swift in Sources */,
+				DE79056C435E926568BA6D81 /* StatsAPI.swift in Sources */,
+				F826D0D85C126AE5886E61D1 /* StatsModel.swift in Sources */,
+				1BF19036720541839F140F5A /* StatsView.swift in Sources */,
+				6553D3D84BD5F530A53F4F9A /* StatsViewModel.swift in Sources */,
+				4F4D7EA557BABDDE30863672 /* Step1BasicInfoView.swift in Sources */,
+				44A0500ED157D80C85C68A64 /* Step2CatchesView.swift in Sources */,
+				8D518C3DB281CE3DC093DE3C /* Step3EquipmentView.swift in Sources */,
+				9BD8DCB836750DCEE1B8BF04 /* Step4SummaryView.swift in Sources */,
+				309D7792E367496377C91A12 /* SyncBadge.swift in Sources */,
+				0401DB7934EC00A2D2662A83 /* SyncManager.swift in Sources */,
+				C3288838B5A817D072B790D8 /* TopCatchListView.swift in Sources */,
+				C3B3501A299B3DCACDF42D1B /* TripAPI.swift in Sources */,
+				AFB75CEC042381F29C32E6B6 /* TripCardView.swift in Sources */,
+				660B4F83ED0981C4E5C44977 /* TripDetailView.swift in Sources */,
+				DC21C8C3951427E7A9BA1528 /* TripDetailViewModel.swift in Sources */,
+				087F7A954F0CCF62038175DE /* TripMediaGridView.swift in Sources */,
+				9CE29C07D17838C3D5260D93 /* TripModel.swift in Sources */,
+				D2D30912211377DC9E380548 /* TripsListView.swift in Sources */,
+				AB5288AF423C73CD12D184C9 /* TripsListViewModel.swift in Sources */,
+				EDEE42C754FA9A9BCC4567DB /* Typography.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A4C093891A6D69F9A0710AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		617A4903C78373AE09C7FCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FishingLog/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangfeng.fishinglog;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A19B5A7452963B7E2237A846 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FishingLog/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangfeng.fishinglog;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F48292B8DE881BC298278C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F115732D695AD029FCCDCBF /* Build configuration list for PBXProject "FishingLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48292B8DE881BC298278C94 /* Debug */,
+				0A4C093891A6D69F9A0710AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		53D4769F21990CF9D96D8E1F /* Build configuration list for PBXNativeTarget "FishingLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617A4903C78373AE09C7FCE2 /* Debug */,
+				A19B5A7452963B7E2237A846 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D7802A4CE987FD636FCD810 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EAB964BA74D4016FE69BB9A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D7802A4CE987FD636FCD810 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0A1025A0878BE6413BDCA7D /* FishingLog.xcdatamodel */,
+			);
+			currentVersion = C0A1025A0878BE6413BDCA7D /* FishingLog.xcdatamodel */;
+			path = FishingLog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2D9F7BC5068FF456E73C7DD9 /* Project object */;
+}

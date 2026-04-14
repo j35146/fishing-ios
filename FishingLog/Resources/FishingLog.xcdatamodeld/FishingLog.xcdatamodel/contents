@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0"
+       lastSavedToolsVersion="21513" systemVersion="22A380"
+       minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="NO"
+       userDefinedModelVersionIdentifier="">
+
+    <!-- TripEntity -->
+    <entity name="TripEntity" representedClassName="TripEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"               optional="NO" attributeType="String"/>
+        <attribute name="localId"          optional="YES" attributeType="UUID"/>
+        <attribute name="title"            optional="YES" attributeType="String"/>
+        <attribute name="tripDate"         optional="NO"  attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="locationName"     optional="YES" attributeType="String"/>
+        <attribute name="weatherTemp"      optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="weatherWind"      optional="YES" attributeType="String"/>
+        <attribute name="weatherCondition" optional="YES" attributeType="String"/>
+        <attribute name="companions"       optional="YES" attributeType="Transformable"
+                   valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="notes"            optional="YES" attributeType="String"/>
+        <attribute name="syncStatus"       optional="NO"  attributeType="String" defaultValueString="pending"/>
+        <attribute name="styleIds"         optional="YES" attributeType="String"/>
+        <attribute name="styleNames"       optional="YES" attributeType="String"/>
+        <attribute name="updatedAt"        optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="createdAt"        optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="catches" optional="YES" toMany="YES"
+                      deletionRule="Cascade" destinationEntity="CatchEntity"
+                      inverseName="trip" inverseEntity="CatchEntity"/>
+        <relationship name="media" optional="YES" toMany="YES"
+                      deletionRule="Cascade" destinationEntity="MediaEntity"
+                      inverseName="trip" inverseEntity="MediaEntity"/>
+    </entity>
+
+    <!-- CatchEntity -->
+    <entity name="CatchEntity" representedClassName="CatchEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"         optional="NO"  attributeType="String"/>
+        <attribute name="localId"    optional="YES" attributeType="UUID"/>
+        <attribute name="species"    optional="YES" attributeType="String"/>
+        <attribute name="weightG"    optional="YES" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="lengthCm"   optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="count"      optional="NO"  attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="isReleased" optional="NO"  attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="styleCode"  optional="YES" attributeType="String"/>
+        <attribute name="notes"      optional="YES" attributeType="String"/>
+        <attribute name="createdAt"  optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="trip" optional="YES" maxCount="1"
+                      deletionRule="Nullify" destinationEntity="TripEntity"
+                      inverseName="catches" inverseEntity="TripEntity"/>
+    </entity>
+
+    <!-- EquipmentEntity（Phase 2 扩展字段） -->
+    <entity name="EquipmentEntity" representedClassName="EquipmentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"            optional="NO"  attributeType="String"/>
+        <attribute name="name"          optional="NO"  attributeType="String"/>
+        <attribute name="brand"         optional="YES" attributeType="String"/>
+        <attribute name="model"         optional="YES" attributeType="String"/>
+        <attribute name="categoryName"  optional="YES" attributeType="String"/>
+        <attribute name="categoryId"    optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status"        optional="YES" attributeType="String" defaultValueString="active"/>
+        <attribute name="purchasePrice" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="purchaseDate"  optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="notes"         optional="YES" attributeType="String"/>
+        <attribute name="styleTags"     optional="YES" attributeType="Transformable"
+                   valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+    </entity>
+
+    <!-- StyleEntity -->
+    <entity name="StyleEntity" representedClassName="StyleEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"   optional="NO"  attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="name" optional="NO"  attributeType="String"/>
+        <attribute name="code" optional="NO"  attributeType="String"/>
+    </entity>
+
+    <!-- MediaEntity（Phase 2 新增） -->
+    <entity name="MediaEntity" representedClassName="MediaEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"         optional="NO"  attributeType="String"/>
+        <attribute name="localId"    optional="YES" attributeType="UUID"/>
+        <attribute name="tripId"     optional="YES" attributeType="String"/>
+        <attribute name="tripLocalId" optional="YES" attributeType="UUID"/>
+        <attribute name="key"        optional="YES" attributeType="String"/>
+        <attribute name="url"        optional="YES" attributeType="String"/>
+        <attribute name="type"       optional="YES" attributeType="String"/>
+        <attribute name="syncStatus" optional="YES" attributeType="String" defaultValueString="pending"/>
+        <attribute name="createdAt"  optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="localImageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="trip" optional="YES" maxCount="1"
+                      deletionRule="Nullify" destinationEntity="TripEntity"
+                      inverseName="media" inverseEntity="TripEntity"/>
+    </entity>
+
+    <!-- SpotEntity（Phase 2 新增） -->
+    <entity name="SpotEntity" representedClassName="SpotEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id"        optional="NO"  attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name"      optional="NO"  attributeType="String"/>
+        <attribute name="spotDescription" optional="YES" attributeType="String"/>
+        <attribute name="latitude"  optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spotType"  optional="YES" attributeType="String"/>
+        <attribute name="isPublic"  optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="photoUrl"  optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+
+</model>
