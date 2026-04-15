@@ -1,9 +1,0 @@
-Target dependency graph (4 targets)
-Target 'FishingLog' in project 'FishingLog'
-➜ Explicit dependency on target 'Alamofire' in project 'Alamofire'
-Target 'Alamofire' in project 'Alamofire'
-➜ Explicit dependency on target 'Alamofire' in project 'Alamofire'
-➜ Explicit dependency on target 'Alamofire_Alamofire' in project 'Alamofire'
-Target 'Alamofire' in project 'Alamofire'
-➜ Explicit dependency on target 'Alamofire_Alamofire' in project 'Alamofire'
-Target 'Alamofire_Alamofire' in project 'Alamofire' (no dependencies)
