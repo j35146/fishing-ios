@@ -44,6 +44,13 @@ struct NewTripView: View {
                                 }
                             }
                         }
+                        // 上传错误提示
+                        if let err = vm.errorMessage {
+                            Text(err)
+                                .font(.flCaption)
+                                .foregroundStyle(Color.destructiveRed)
+                                .padding(.horizontal, FLMetrics.horizontalPadding)
+                        }
                     }
                     .padding(.horizontal, FLMetrics.horizontalPadding)
                     .padding(.bottom, 32)

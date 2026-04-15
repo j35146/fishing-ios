@@ -41,12 +41,7 @@ final class APIClient {
                             continuation.resume(throwing: AppError.serverError("无数据"))
                         }
                     case .failure(let error):
-                        if response.response?.statusCode == 401 {
-                            Task { @MainActor in AuthManager.shared.logout() }
-                            continuation.resume(throwing: AppError.unauthorized)
-                        } else {
-                            continuation.resume(throwing: AppError.networkError(error.localizedDescription))
-                        }
+                        continuation.resume(throwing: AppError.networkError(error.localizedDescription))
                     }
                 }
         }

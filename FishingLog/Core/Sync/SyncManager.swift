@@ -35,6 +35,20 @@ final class SyncManager: ObservableObject {
         Task { await sync(trips: pending) }
     }
 
+    // 将 style code（TRADITIONAL/LURE）或数字 id 转为 Int 数组
+    private static func styleCodeToIds(_ raw: String?) -> [Int] {
+        guard let raw, !raw.isEmpty else { return [] }
+        return raw.split(separator: ",").compactMap { part in
+            let s = part.trimmingCharacters(in: .whitespaces)
+            if let id = Int(s) { return id }
+            switch s {
+            case "TRADITIONAL": return 1
+            case "LURE":        return 2
+            default:            return nil
+            }
+        }
+    }
+
     private func sync(trips: [TripEntity]) async {
         guard !isSyncing else { return }
         isSyncing = true
@@ -50,9 +64,10 @@ final class SyncManager: ObservableObject {
                 "location_name" : trip.locationName as Any,
                 "title"         : trip.title as Any,
                 "notes"         : trip.notes as Any,
-                "style_ids"     : (trip.styleIds ?? "").split(separator: ",")
-                                    .compactMap { Int($0) },
-                "updated_at"    : ISO8601DateFormatter().string(from: trip.updatedAt ?? Date())
+                "style_ids"     : Self.styleCodeToIds(trip.styleIds),
+                "updated_at"    : ISO8601DateFormatter().string(from: trip.updatedAt ?? Date()),
+                "latitude"      : trip.latitude != 0 ? trip.latitude : NSNull(),
+                "longitude"     : trip.longitude != 0 ? trip.longitude : NSNull()
             ]
         }
 

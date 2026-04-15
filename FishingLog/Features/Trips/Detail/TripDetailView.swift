@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 struct TripDetailView: View {
     @StateObject private var vm: TripDetailViewModel
@@ -29,11 +30,10 @@ struct TripDetailView: View {
                                 .font(.flTitle).foregroundColor(.textPrimary)
 
                             // 钓法标签
+                            let styleNames: [String] = (vm.trip.styleNames ?? "").split(separator: ",").map(String.init)
                             HStack(spacing: 8) {
-                                ForEach((vm.trip.styleNames ?? "").split(separator: ",").map(String.init), id: \.self) { name in
-                                    Text(name).font(.flCaption).foregroundColor(.appBackground)
-                                        .padding(.horizontal, 8).padding(.vertical, 3)
-                                        .background(Color.accentBlue).cornerRadius(6)
+                                ForEach(styleNames, id: \.self) { name in
+                                    styleTagView(name)
                                 }
                             }
 
@@ -49,6 +49,25 @@ struct TripDetailView: View {
                                 }
                             }
                         }
+                    }
+
+                    // 钓场地图（有坐标时显示）
+                    if vm.trip.latitude != 0 && vm.trip.longitude != 0 {
+                        let coord = CLLocationCoordinate2D(
+                            latitude: vm.trip.latitude,
+                            longitude: vm.trip.longitude
+                        )
+                        Map(initialPosition: .region(MKCoordinateRegion(
+                            center: coord,
+                            latitudinalMeters: 2000,
+                            longitudinalMeters: 2000
+                        ))) {
+                            Marker(vm.trip.locationName ?? "钓场", coordinate: coord)
+                                .tint(Color.primaryGold)
+                        }
+                        .frame(height: 160)
+                        .cornerRadius(FLMetrics.cornerRadius)
+                        .allowsHitTesting(false)
                     }
 
                     // 渔获记录
@@ -80,9 +99,7 @@ struct TripDetailView: View {
                     }
 
                     // 出行相册
-                    if let localId = vm.trip.localId {
-                        TripMediaGridView(tripLocalId: localId)
-                    }
+                    TripMediaGridView(tripLocalId: vm.trip.localId ?? UUID())
 
                     // 同行钓友
                     if let companions = vm.trip.companions as? [String], !companions.isEmpty {
@@ -129,6 +146,18 @@ struct TripDetailView: View {
         } message: {
             Text("删除后无法恢复，确认删除此次出行记录？")
         }
+    }
+
+    // 钓法标签视图（拆分子表达式，避免 Swift 类型检查超时）
+    @ViewBuilder
+    private func styleTagView(_ name: String) -> some View {
+        Text(name)
+            .font(.flCaption)
+            .foregroundColor(.appBackground)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .background(Color.accentBlue)
+            .cornerRadius(6)
     }
 }
 

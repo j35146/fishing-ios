@@ -21,10 +21,18 @@ packages:
     url: https://github.com/Alamofire/Alamofire
     from: "5.9.0"
 
+schemes:
+  FishingLog:
+    build:
+      targets:
+        FishingLog: all
+    run:
+      config: Debug
+
 targets:
   FishingLog:
     type: application
-    platform: iOS
+    supportedDestinations: [iOS]
     deploymentTarget: "17.0"
     sources:
       - path: FishingLog
@@ -36,17 +44,21 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jiangfeng.fishinglog
         INFOPLIST_FILE: FishingLog/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: FishingLog/FishingLog.entitlements
         TARGETED_DEVICE_FAMILY: "1"
         DEVELOPMENT_TEAM: ""
-        CODE_SIGNING_ALLOWED: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     dependencies:
       - package: Alamofire
     info:
       path: FishingLog/Resources/Info.plist
       properties:
         CFBundleDisplayName: 钓鱼志
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
         NSLocationWhenInUseUsageDescription: 用于显示附近钓点
         NSCameraUsageDescription: 拍摄钓鱼照片和视频
+        NSMicrophoneUsageDescription: 录制钓鱼视频时需要麦克风
         NSPhotoLibraryUsageDescription: 选取照片添加到出行记录
         NSPhotoLibraryAddUsageDescription: 保存钓鱼照片到相册
         UILaunchScreen:

@@ -16,6 +16,8 @@ struct Trip: Codable, Identifiable {
     let catches: [FishCatch]?
     let catchCount: Int?
     let updatedAt: String?
+    let latitude: Double?
+    let longitude: Double?
 
     enum CodingKeys: String, CodingKey {
         case id, title, notes, styles, catches
@@ -29,6 +31,7 @@ struct Trip: Codable, Identifiable {
         case syncStatus = "sync_status"
         case catchCount = "catch_count"
         case updatedAt = "updated_at"
+        case latitude, longitude
     }
 
     // 自定义解码：weather_temp 是 DECIMAL(4,1)，node-pg 可能返回 String
@@ -53,6 +56,18 @@ struct Trip: Codable, Identifiable {
             weatherTemp = Double(str)
         } else {
             weatherTemp = try c.decodeIfPresent(Double.self, forKey: .weatherTemp)
+        }
+        // latitude: PostgreSQL DECIMAL → 可能是 String
+        if let str = try? c.decodeIfPresent(String.self, forKey: .latitude) {
+            latitude = Double(str)
+        } else {
+            latitude = try c.decodeIfPresent(Double.self, forKey: .latitude)
+        }
+        // longitude: PostgreSQL DECIMAL → 可能是 String
+        if let str = try? c.decodeIfPresent(String.self, forKey: .longitude) {
+            longitude = Double(str)
+        } else {
+            longitude = try c.decodeIfPresent(Double.self, forKey: .longitude)
         }
     }
 }

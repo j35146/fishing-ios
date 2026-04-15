@@ -3,15 +3,14 @@ import Alamofire
 
 extension APIClient {
     // 分页获取出行列表
+    // 后端返回 { success, data: [...], pagination: {...} }
     func fetchTrips(page: Int = 1, pageSize: Int = 50) async throws -> [Trip] {
-        struct PagedData: Decodable { let list: [Trip]?; let items: [Trip]? }
-        let result: PagedData = try await request(
+        return try await request(
             "/trips?page=\(page)&pageSize=\(pageSize)",
             method: .get,
             parameters: nil,
             encoding: URLEncoding.default
         )
-        return result.list ?? result.items ?? []
     }
 
     // 批量同步

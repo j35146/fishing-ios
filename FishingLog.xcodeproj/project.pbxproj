@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,16 +21,20 @@
 		32778AF02CF02406C436F609 /* SpotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35A579F5B95FA93952B84A /* SpotAPI.swift */; };
 		3D06B2731EE274DD9422F2FE /* FLCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DADBD9E49EB0BDB11F73B6 /* FLCard.swift */; };
 		3DE58D00BA252DA766AD3B3B /* FLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB71387CAABB53B04AE745 /* FLButton.swift */; };
+		3E9275402595A074554B96E9 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C095ACBA5BD27E120FC07E1 /* WeatherService.swift */; };
 		3F8A54856E6132B632C346DF /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D75667A0BA30232C437B3 /* MediaModel.swift */; };
+		4242E2712E9C163C3407DA89 /* MapLocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE435CAAAD6FAB2477A38C4 /* MapLocationPickerView.swift */; };
 		44A0500ED157D80C85C68A64 /* Step2CatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BB5A06B07F8A749BCABD05 /* Step2CatchesView.swift */; };
 		4655F31E37DB485DADCF5A4B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED1FC4D70172B6C40BA59F /* APIError.swift */; };
 		49E92ABE571639C81A27A6EE /* SpotMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89251233BC69CFA7B1DE4B42 /* SpotMapView.swift */; };
 		4A6367864F25A22FB891649D /* NewEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D37DC9AB5E35EBC913C739 /* NewEquipmentView.swift */; };
+		4E6B2AD6556E29BC6C45C4D6 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DB165C7535BCB3EA969B3 /* VideoPlayerView.swift */; };
 		4F4D7EA557BABDDE30863672 /* Step1BasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A65FBD59B5989E853AE9FF /* Step1BasicInfoView.swift */; };
 		5200B9B5CD3808026A9F92B0 /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688F8CC7692A203E58C3B0A1 /* EquipmentModel.swift */; };
 		587AF62E691CCCC457E9EECB /* GearListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081294B8B66E1EC6FA37BA2 /* GearListView.swift */; };
 		5EC7EBAD64F03008D184B48C /* FishingLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */; };
 		60B56DAAE4043A533BD45C48 /* OverviewCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFF32A5367E33CCA55D129 /* OverviewCardsView.swift */; };
+		63D31CA25975D4D034FFF551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D132F04126901EEBEEEDC275 /* Assets.xcassets */; };
 		6504B0DA965ACF9ADA853648 /* SpotCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1EFE528651543AFC902150 /* SpotCardView.swift */; };
 		6553D3D84BD5F530A53F4F9A /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF86BDC609017897DB71EE /* StatsViewModel.swift */; };
 		660B4F83ED0981C4E5C44977 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183D07DD8781B47BADCFB59 /* TripDetailView.swift */; };
@@ -59,6 +63,7 @@
 		C3B3501A299B3DCACDF42D1B /* TripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF2ACA74D1BAE3F52E8AD3 /* TripAPI.swift */; };
 		C65B37AE4ED25734A5C73ABA /* NewTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C749E48993DE788E26F677 /* NewTripView.swift */; };
 		C8307052FA82D493A501EE0E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF85076454595C0D0C11F /* MainTabView.swift */; };
+		CF51CA454376337CDB630CCE /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ACBC0B307DDDF7B03B1BDF /* CameraPickerView.swift */; };
 		D0A8E0CA8AC94BC777AC3A3F /* FishingLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9CB6A1657E55A389D95F4 /* FishingLogApp.swift */; };
 		D2D30912211377DC9E380548 /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C58B439378F0D9EF3D0BB91 /* TripsListView.swift */; };
 		D49C55491D006DC232B2F257 /* NewTripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */; };
@@ -76,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		00C749E48993DE788E26F677 /* NewTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripView.swift; sourceTree = "<group>"; };
+		0377B1437FFA193AC84E249C /* FishingLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FishingLog.entitlements; sourceTree = "<group>"; };
 		0965B467F1DE9BECD209D684 /* GearListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearListViewModel.swift; sourceTree = "<group>"; };
 		097966B3BDB1489F1E8ED39C /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		1351E38874AE4432FBF0EC4D /* NewSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		67BB5A06B07F8A749BCABD05 /* Step2CatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2CatchesView.swift; sourceTree = "<group>"; };
 		688F8CC7692A203E58C3B0A1 /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
 		69EF86BDC609017897DB71EE /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		6CE435CAAAD6FAB2477A38C4 /* MapLocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationPickerView.swift; sourceTree = "<group>"; };
 		71B1CA938280FEF49B36584A /* SpotListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListView.swift; sourceTree = "<group>"; };
 		72D10CEFA594F675A1D1E471 /* SpeciesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesChartView.swift; sourceTree = "<group>"; };
 		74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewModel.swift; sourceTree = "<group>"; };
@@ -106,9 +113,12 @@
 		76E04285FF7F2E28329C6EEF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		78972CCAF7FF8590951F5401 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsView.swift; sourceTree = "<group>"; };
 		7C58B439378F0D9EF3D0BB91 /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
+		828DB165C7535BCB3EA969B3 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		87ACBC0B307DDDF7B03B1BDF /* CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerView.swift; sourceTree = "<group>"; };
 		88CE3425E4BF134F602A9814 /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		89251233BC69CFA7B1DE4B42 /* SpotMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMapView.swift; sourceTree = "<group>"; };
 		89ED1FC4D70172B6C40BA59F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8C095ACBA5BD27E120FC07E1 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		944ACBDFC0DB148E2DEB8300 /* FLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTextField.swift; sourceTree = "<group>"; };
 		961AF7A1CA9962829F4EC38B /* TripDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewModel.swift; sourceTree = "<group>"; };
 		96AB71387CAABB53B04AE745 /* FLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLButton.swift; sourceTree = "<group>"; };
@@ -119,7 +129,7 @@
 		9F4C02F5CB6E51118D84AEB5 /* EquipmentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentAPI.swift; sourceTree = "<group>"; };
 		A8E520DD9CF4389B742DC150 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A8F9CB6A1657E55A389D95F4 /* FishingLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingLogApp.swift; sourceTree = "<group>"; };
-		AA07792FD6FDFCC59B9B7B6C /* FishingLog.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FishingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA07792FD6FDFCC59B9B7B6C /* FishingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF35A579F5B95FA93952B84A /* SpotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotAPI.swift; sourceTree = "<group>"; };
 		B081294B8B66E1EC6FA37BA2 /* GearListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearListView.swift; sourceTree = "<group>"; };
 		BC1EFE528651543AFC902150 /* SpotCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCardView.swift; sourceTree = "<group>"; };
@@ -129,6 +139,7 @@
 		C49D8F0FD101A873611EC40C /* StatsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsAPI.swift; sourceTree = "<group>"; };
 		C5741C6B8C870EAB6444E690 /* TripsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewModel.swift; sourceTree = "<group>"; };
 		D12A27D6290FB093C1513AF3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D132F04126901EEBEEEDC275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D922D72212FC7CE0F8DF561E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DCC4F533429A2FC90138CE42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF415E86D94960840134AE7D /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -158,6 +169,7 @@
 		39DBF9745E63586E13AD6B23 /* FishingLog */ = {
 			isa = PBXGroup;
 			children = (
+				0377B1437FFA193AC84E249C /* FishingLog.entitlements */,
 				F08A974EBDAB58823E1D1ADF /* App */,
 				7FC870A6864A421F0553C8F6 /* Core */,
 				B274D3235667513772B7EC2A /* DesignSystem */,
@@ -171,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				FD64D01AB1DC065A01030942 /* TripMediaGridView.swift */,
+				828DB165C7535BCB3EA969B3 /* VideoPlayerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,6 +199,8 @@
 		4CFB72012DD59780CA7FA9EB /* NewTrip */ = {
 			isa = PBXGroup;
 			children = (
+				87ACBC0B307DDDF7B03B1BDF /* CameraPickerView.swift */,
+				6CE435CAAAD6FAB2477A38C4 /* MapLocationPickerView.swift */,
 				00C749E48993DE788E26F677 /* NewTripView.swift */,
 				74BD1CDF41157810E38A6B15 /* NewTripViewModel.swift */,
 				22A65FBD59B5989E853AE9FF /* Step1BasicInfoView.swift */,
@@ -307,6 +322,7 @@
 				4D7D2F7023FE5A0ED2A014F1 /* Media */,
 				4FD3B47875123B21475A0805 /* Network */,
 				49A25AB92BA91543083E3A91 /* Sync */,
+				ED288146D7A89CBBCBDF9047 /* Weather */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -431,6 +447,14 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		ED288146D7A89CBBCBDF9047 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				8C095ACBA5BD27E120FC07E1 /* WeatherService.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		F08A974EBDAB58823E1D1ADF /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,9 +468,10 @@
 		F5274D0F7C17D5A490EB25E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D132F04126901EEBEEEDC275 /* Assets.xcassets */,
 				580D7EB210C4FB964A3DCDE8 /* Config.plist */,
-				378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */,
 				9D991AACECAF4E5D86BEB300 /* Info.plist */,
+				378A91563FDABFF0FD9DC8C2 /* FishingLog.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -490,14 +515,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
-				TargetAttributes = {
-					C6B3EC128A73CA974549E806 = {
-						DevelopmentTeam = "";
-					};
-				};
 			};
 			buildConfigurationList = 2F115732D695AD029FCCDCBF /* Build configuration list for PBXProject "FishingLog" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -505,9 +524,12 @@
 				en,
 			);
 			mainGroup = AE7DB46984E5271724BD162F;
+			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				9D7802A4CE987FD636FCD810 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6CFAD5528E1200FE401AE8AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -521,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D31CA25975D4D034FFF551 /* Assets.xcassets in Resources */,
 				08959320133B7A68F9B43CF6 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +559,7 @@
 				4655F31E37DB485DADCF5A4B /* APIError.swift in Sources */,
 				6902B24A81B48460AEBB59F2 /* AboutView.swift in Sources */,
 				D800D883592D7E6CCEE65F69 /* AuthManager.swift in Sources */,
+				CF51CA454376337CDB630CCE /* CameraPickerView.swift in Sources */,
 				F0E55ABE24EE4648E8805B0D /* Colors.swift in Sources */,
 				924B5D4BFC61C48C5C664559 /* ContentView.swift in Sources */,
 				FF778D076AC5CBC6A522C0BF /* CoreDataManager.swift in Sources */,
@@ -554,6 +578,7 @@
 				7147ED3CD95E5860EEAB0EE2 /* KeychainManager.swift in Sources */,
 				6D134F75DBF73CC02DFC3B6B /* LoginView.swift in Sources */,
 				C8307052FA82D493A501EE0E /* MainTabView.swift in Sources */,
+				4242E2712E9C163C3407DA89 /* MapLocationPickerView.swift in Sources */,
 				A3A785E1B358C1046A233313 /* MediaAPI.swift in Sources */,
 				3F8A54856E6132B632C346DF /* MediaModel.swift in Sources */,
 				8F9F0EA2D036C97C896380C0 /* MediaUploadManager.swift in Sources */,
@@ -595,6 +620,8 @@
 				D2D30912211377DC9E380548 /* TripsListView.swift in Sources */,
 				AB5288AF423C73CD12D184C9 /* TripsListViewModel.swift in Sources */,
 				EDEE42C754FA9A9BCC4567DB /* Typography.swift in Sources */,
+				4E6B2AD6556E29BC6C45C4D6 /* VideoPlayerView.swift in Sources */,
+				3E9275402595A074554B96E9 /* WeatherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +678,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -662,9 +689,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_ENTITLEMENTS = FishingLog/FishingLog.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z8355D85FK;
 				INFOPLIST_FILE = FishingLog/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,7 +699,11 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangfeng.fishinglog;
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -681,9 +712,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_ENTITLEMENTS = FishingLog/FishingLog.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z8355D85FK;
 				INFOPLIST_FILE = FishingLog/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -691,7 +722,11 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangfeng.fishinglog;
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -753,7 +788,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;

@@ -57,6 +57,7 @@ struct AddCatchSheet: View {
     @State private var form = NewCatchForm()
     @State private var weightStr = ""
     @State private var lengthStr = ""
+    @State private var countStr = "1"
 
     var body: some View {
         NavigationStack {
@@ -72,10 +73,9 @@ struct AddCatchSheet: View {
                                     FLTextField(placeholder: "体长 (cm)", text: $lengthStr, keyboardType: .decimalPad)
                                 }
                                 HStack {
-                                    Text("数量").font(.flBody).foregroundColor(.textPrimary)
-                                    Spacer()
-                                    Stepper("\(form.count)", value: $form.count, in: 1...99)
-                                        .foregroundColor(.textPrimary)
+                                    FLTextField(placeholder: "数量", text: $countStr, keyboardType: .numberPad)
+                                        .frame(maxWidth: 80)
+                                    Text("尾").font(.flBody).foregroundColor(.textSecondary)
                                 }
                                 HStack {
                                     Text("已放流").font(.flBody).foregroundColor(.textPrimary)
@@ -110,6 +110,7 @@ struct AddCatchSheet: View {
                     Button("添加") {
                         form.weightG = Int(weightStr) ?? 0
                         form.lengthCm = Double(lengthStr) ?? 0
+                        form.count = max(1, Int(countStr) ?? 1)
                         onAdd(form)
                         dismiss()
                     }

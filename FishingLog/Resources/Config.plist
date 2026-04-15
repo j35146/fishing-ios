@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
     <key>API_BASE_URL</key>
-    <string>http://172.16.5.106</string>
+    <string>http://home.weixia.org:35146</string>
 </dict>
 </plist>

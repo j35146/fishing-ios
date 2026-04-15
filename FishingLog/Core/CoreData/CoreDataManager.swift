@@ -44,28 +44,51 @@ final class CoreDataManager: ObservableObject {
     }
 
     func upsertTrip(from trip: Trip) {
-        let req = TripEntity.fetchRequest()
-        req.predicate = NSPredicate(format: "id == %@", trip.id)
-        let entity = (try? context.fetch(req))?.first ?? TripEntity(context: context)
+        // 先按服务端 id 查找，找不到再按 localId 查找，避免创建重复记录
+        let byId = TripEntity.fetchRequest()
+        byId.predicate = NSPredicate(format: "id == %@", trip.id)
+        var found = (try? context.fetch(byId))?.first
+
+        if found == nil, let lid = trip.localId, !lid.isEmpty,
+           let uuid = UUID(uuidString: lid) {
+            let byLocal = TripEntity.fetchRequest()
+            byLocal.predicate = NSPredicate(format: "localId == %@", uuid as CVarArg)
+            found = (try? context.fetch(byLocal))?.first
+        }
+
+        let entity = found ?? TripEntity(context: context)
         entity.id           = trip.id
-        entity.localId      = trip.localId.flatMap { UUID(uuidString: $0) }
+        // 只在服务端返回了 local_id 时才更新，避免覆盖为 nil
+        if let newLocalId = trip.localId.flatMap({ UUID(uuidString: $0) }) {
+            entity.localId = newLocalId
+        }
         entity.title        = trip.title
         entity.locationName = trip.locationName
         entity.syncStatus   = "synced"
         entity.notes        = trip.notes
         if let dateStr = trip.tripDate as String? {
-            entity.tripDate = ISO8601DateFormatter().date(from: dateStr + "T00:00:00Z")
+            // 服务端可能返回 "2026-04-14T00:00:00.000Z" 或 "2026-04-14"
+            let isoFmt = ISO8601DateFormatter()
+            isoFmt.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+            entity.tripDate = isoFmt.date(from: dateStr)
+                           ?? ISO8601DateFormatter().date(from: dateStr)
+                           ?? ISO8601DateFormatter().date(from: dateStr + "T00:00:00Z")
                            ?? parseDateString(dateStr)
         }
         entity.styleNames = trip.styles?.map(\.name).joined(separator: ",")
         entity.styleIds   = trip.styles?.map { String($0.id) }.joined(separator: ",")
+        // 服务端坐标回写（仅在有值时更新，保留本地已有坐标）
+        if let lat = trip.latitude { entity.latitude = lat }
+        if let lng = trip.longitude { entity.longitude = lng }
         saveContext()
     }
 
     func createTrip(localId: UUID, date: Date, locationName: String?,
                     title: String?, styleIds: String, styleNames: String,
                     weatherTemp: Double?, weatherCondition: String?,
-                    companions: [String], notes: String?) -> TripEntity {
+                    companions: [String], notes: String?,
+                    latitude: Double? = nil, longitude: Double? = nil,
+                    spotId: String? = nil) -> TripEntity {
         let entity = TripEntity(context: context)
         entity.id           = localId.uuidString
         entity.localId      = localId
@@ -78,6 +101,10 @@ final class CoreDataManager: ObservableObject {
         entity.weatherCondition = weatherCondition
         entity.companions   = companions
         entity.notes        = notes
+        // 地图坐标与钓点关联
+        entity.latitude     = latitude ?? 0
+        entity.longitude    = longitude ?? 0
+        entity.spotId       = spotId
         entity.syncStatus   = "pending"
         entity.createdAt    = Date()
         entity.updatedAt    = Date()

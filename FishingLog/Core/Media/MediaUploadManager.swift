@@ -10,17 +10,15 @@ final class MediaUploadManager: ObservableObject {
     @Published var uploadProgress: Double = 0
     @Published var lastError: String?
 
-    // 上传单张图片，关联本地出行 ID
-    func uploadImage(_ imageData: Data, tripLocalId: UUID) async {
+    // 上传媒体文件（图片或视频），关联本地出行 ID
+    func uploadMedia(_ data: Data, mimeType: String, fileName: String, tripLocalId: UUID) async {
         isUploading = true
         uploadProgress = 0
         lastError = nil
 
-        let fileName = "photo-\(UUID().uuidString).jpg"
-
         do {
             let result = try await APIClient.shared.uploadMedia(
-                data: imageData, mimeType: "image/jpeg", fileName: fileName
+                data: data, mimeType: mimeType, fileName: fileName
             )
             // 写入 CoreData（已同步状态）
             CoreDataManager.shared.upsertMedia(MediaSaveRequest(
@@ -33,20 +31,34 @@ final class MediaUploadManager: ObservableObject {
             uploadProgress = 1.0
         } catch {
             lastError = error.localizedDescription
-            // 写入失败状态，保存本地图片数据以便重试
+            // 写入失败状态，保存本地数据以便重试
             CoreDataManager.shared.upsertMedia(MediaSaveRequest(
                 key: fileName,
                 url: "",
-                type: "image",
+                type: mimeType.hasPrefix("video") ? "video" : "image",
                 tripLocalId: tripLocalId,
                 syncStatus: "failed",
-                localImageData: imageData
+                localImageData: data
             ))
         }
         isUploading = false
     }
 
-    // 批量上传
+    // 保持向后兼容：上传单张图片
+    func uploadImage(_ imageData: Data, tripLocalId: UUID) async {
+        let fileName = "photo-\(UUID().uuidString).jpg"
+        await uploadMedia(imageData, mimeType: "image/jpeg", fileName: fileName, tripLocalId: tripLocalId)
+    }
+
+    // 批量上传媒体项
+    func uploadMediaItems(_ items: [(data: Data, mimeType: String, fileName: String, tripLocalId: UUID)]) async {
+        for (index, item) in items.enumerated() {
+            await uploadMedia(item.data, mimeType: item.mimeType, fileName: item.fileName, tripLocalId: item.tripLocalId)
+            uploadProgress = Double(index + 1) / Double(items.count)
+        }
+    }
+
+    // 保持向后兼容：批量上传图片
     func uploadImages(_ items: [(data: Data, tripLocalId: UUID)]) async {
         for (index, item) in items.enumerated() {
             await uploadImage(item.data, tripLocalId: item.tripLocalId)
@@ -62,8 +74,11 @@ final class MediaUploadManager: ObservableObject {
                   let tripLocalId = item.tripLocalId else { continue }
             // 删除旧记录
             CoreDataManager.shared.deleteMediaById(id: item.id ?? "")
-            // 重新上传
-            await uploadImage(imageData, tripLocalId: tripLocalId)
+            // 重新上传（根据文件名判断类型）
+            let isVideo = item.key?.hasPrefix("video-") ?? false
+            let mimeType = isVideo ? "video/mp4" : "image/jpeg"
+            let fileName = item.key ?? "photo-\(UUID().uuidString).jpg"
+            await uploadMedia(imageData, mimeType: mimeType, fileName: fileName, tripLocalId: tripLocalId)
         }
     }
 }
