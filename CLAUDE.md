@@ -95,8 +95,9 @@ fishing-ios/
   │   │   │       ├── MapLocationPickerView.swift   ← 全屏地图搜索+选点
   │   │   │       └── CameraPickerView.swift        ← UIImagePickerController 包装
   │   │   ├── Equipment/
-  │   │   │   ├── GearListView.swift
+  │   │   │   ├── GearListView.swift           ← 装备列表（按大类 styleTag 筛选）
   │   │   │   ├── GearListViewModel.swift
+  │   │   │   ├── EquipmentDetailView.swift    ← 装备详情页（点击卡片进入）
   │   │   │   ├── NewEquipmentView.swift
   │   │   │   ├── EditEquipmentView.swift
   │   │   │   └── Components/GearCardView.swift
