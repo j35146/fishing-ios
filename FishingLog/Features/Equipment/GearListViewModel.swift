@@ -20,7 +20,7 @@ final class GearListViewModel: ObservableObject {
         error = nil
         do {
             async let cats = APIClient.shared.fetchCategories()
-            async let equip = APIClient.shared.fetchEquipment(categoryId: selectedCategoryId)
+            async let equip = APIClient.shared.fetchEquipment(categoryId: selectedCategoryId, styleTag: selectedGroup.styleTag)
             (categories, equipments) = try await (cats, equip)
             CoreDataManager.shared.upsertEquipments(equipments)
         } catch {

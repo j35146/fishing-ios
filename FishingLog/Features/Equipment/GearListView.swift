@@ -74,9 +74,15 @@ struct GearListView: View {
                     } else {
                         List {
                             ForEach(vm.equipments) { item in
-                                GearCardView(item: item,
-                                             onEdit: { editingEquipment = item },
-                                             onDelete: { Task { await vm.deleteEquipment(id: item.id) } })
+                                NavigationLink {
+                                    EquipmentDetailView(item: item,
+                                                        categories: vm.categories,
+                                                        onUpdated: { Task { await vm.refresh() } })
+                                } label: {
+                                    GearCardView(item: item,
+                                                 onEdit: { editingEquipment = item },
+                                                 onDelete: { Task { await vm.deleteEquipment(id: item.id) } })
+                                }
                                 .listRowBackground(Color.appBackground)
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets(top: 4, leading: FLMetrics.horizontalPadding,

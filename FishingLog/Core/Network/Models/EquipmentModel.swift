@@ -69,6 +69,8 @@ enum EquipmentGroup: String, CaseIterable, Identifiable {
     case lure = "lure"
 
     var id: String { rawValue }
+    // API 筛选用大写（与数据库 style_tags 一致）
+    var styleTag: String { rawValue.uppercased() }
     var displayName: String {
         switch self {
         case .traditional: "台钓"

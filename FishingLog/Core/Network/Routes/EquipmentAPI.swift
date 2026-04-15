@@ -5,9 +5,10 @@ extension APIClient {
     // 获取装备列表（支持分类筛选）
     // 后端返回 { success, data: [...], pagination: {...} }
     // data 直接是数组，通过 APIResponse<[Equipment]> 解码
-    func fetchEquipment(categoryId: Int? = nil) async throws -> [Equipment] {
+    func fetchEquipment(categoryId: Int? = nil, styleTag: String? = nil) async throws -> [Equipment] {
         var path = "/equipment?pageSize=200"
         if let catId = categoryId { path += "&categoryId=\(catId)" }
+        if let tag = styleTag { path += "&styleTag=\(tag)" }
         return try await request(path, method: .get,
                                  parameters: nil, encoding: URLEncoding.default)
     }

@@ -39,6 +39,7 @@
 		6553D3D84BD5F530A53F4F9A /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF86BDC609017897DB71EE /* StatsViewModel.swift */; };
 		660B4F83ED0981C4E5C44977 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183D07DD8781B47BADCFB59 /* TripDetailView.swift */; };
 		6902B24A81B48460AEBB59F2 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E04285FF7F2E28329C6EEF /* AboutView.swift */; };
+		6AE6F8E035F34BE5F101E844 /* EquipmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C0BA5936875B9AD9B542AC /* EquipmentDetailView.swift */; };
 		6D134F75DBF73CC02DFC3B6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A27D6290FB093C1513AF3 /* LoginView.swift */; };
 		713732C7F99B10BA661BFB36 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B64CA67E93659C776A4BF /* APIClient.swift */; };
 		7147ED3CD95E5860EEAB0EE2 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF415E86D94960840134AE7D /* KeychainManager.swift */; };
@@ -138,6 +139,7 @@
 		C3FF2ACA74D1BAE3F52E8AD3 /* TripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAPI.swift; sourceTree = "<group>"; };
 		C49D8F0FD101A873611EC40C /* StatsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsAPI.swift; sourceTree = "<group>"; };
 		C5741C6B8C870EAB6444E690 /* TripsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewModel.swift; sourceTree = "<group>"; };
+		C8C0BA5936875B9AD9B542AC /* EquipmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentDetailView.swift; sourceTree = "<group>"; };
 		D12A27D6290FB093C1513AF3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D132F04126901EEBEEEDC275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D922D72212FC7CE0F8DF561E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				66884168D4B025985750EA3D /* EditEquipmentView.swift */,
+				C8C0BA5936875B9AD9B542AC /* EquipmentDetailView.swift */,
 				B081294B8B66E1EC6FA37BA2 /* GearListView.swift */,
 				0965B467F1DE9BECD209D684 /* GearListViewModel.swift */,
 				57D37DC9AB5E35EBC913C739 /* NewEquipmentView.swift */,
@@ -565,6 +568,7 @@
 				FF778D076AC5CBC6A522C0BF /* CoreDataManager.swift in Sources */,
 				8FE0B7295C248939628F815E /* EditEquipmentView.swift in Sources */,
 				0333E33FA6171C66B7F8B002 /* EquipmentAPI.swift in Sources */,
+				6AE6F8E035F34BE5F101E844 /* EquipmentDetailView.swift in Sources */,
 				5200B9B5CD3808026A9F92B0 /* EquipmentModel.swift in Sources */,
 				3DE58D00BA252DA766AD3B3B /* FLButton.swift in Sources */,
 				3D06B2731EE274DD9422F2FE /* FLCard.swift in Sources */,
