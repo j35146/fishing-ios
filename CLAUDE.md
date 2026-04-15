@@ -329,7 +329,7 @@ xcodebuild build \
 |------|------|
 | API | http://home.weixia.org:35146 |
 | SSH | `ssh -p 11122 thomas@home.weixia.org` |
-| MinIO | Docker named volume `minio-data`（非 bind mount，避免 macOS VirtioFS 锁问题） |
+| MinIO | 生产挂载 NAS `/mnt/nas/fishing`；开发用 named volume（避免 macOS VirtioFS 锁问题） |
 | 数据库 | PostgreSQL 16 + PostGIS |
 | nginx | `client_max_body_size 500M` |
 
