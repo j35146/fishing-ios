@@ -58,12 +58,6 @@ struct GearCardView: View {
             }
             .tint(.accentBlue)
         }
-        .alert("确认删除", isPresented: $showDeleteAlert) {
-            Button("删除", role: .destructive) { onDelete() }
-            Button("取消", role: .cancel) {}
-        } message: {
-            Text("确认删除此装备？已被出行引用的装备无法删除。")
-        }
     }
 }
 

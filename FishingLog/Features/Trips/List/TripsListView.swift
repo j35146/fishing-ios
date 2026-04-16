@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreData
 
 struct TripsListView: View {
     @StateObject private var viewModel = TripsListViewModel()
@@ -42,6 +43,9 @@ struct TripsListView: View {
                 NewTripView { await viewModel.refresh() }
             }
             .task { viewModel.loadLocal(); await viewModel.refresh() }
+            .onReceive(NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)) { _ in
+                viewModel.loadLocal()
+            }
         }
     }
 }

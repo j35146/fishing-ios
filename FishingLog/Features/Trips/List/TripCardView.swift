@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TripCardView: View {
-    let trip: TripEntity
+    @ObservedObject var trip: TripEntity
 
     private var displayDate: String {
         guard let date = trip.tripDate else { return "未知日期" }
@@ -41,8 +41,8 @@ struct TripCardView: View {
                             .cornerRadius(6)
                     }
                     Spacer()
-                    let catchCount = trip.catches?.count ?? 0
-                    Label("\(catchCount) 尾", systemImage: "fish.fill")
+                    let totalFish = (trip.catches as? Set<CatchEntity>)?.reduce(0) { $0 + Int($1.count) } ?? 0
+                    Label("\(totalFish) 尾", systemImage: "fish.fill")
                         .font(.flCaption).foregroundColor(.textSecondary)
                 }
             }

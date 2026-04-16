@@ -80,8 +80,9 @@ fishing-ios/
   │   │   │   │   ├── TripsListViewModel.swift
   │   │   │   │   └── TripCardView.swift
   │   │   │   ├── Detail/
-  │   │   │   │   ├── TripDetailView.swift         ← 含内嵌小地图
+  │   │   │   │   ├── TripDetailView.swift         ← 含内嵌小地图 + 编辑/删除菜单
   │   │   │   │   ├── TripDetailViewModel.swift
+  │   │   │   │   ├── EditTripView.swift           ← 单页编辑（含渔获管理+媒体管理）
   │   │   │   │   └── Components/
   │   │   │   │       ├── TripMediaGridView.swift   ← 图片+视频网格
   │   │   │   │       └── VideoPlayerView.swift     ← 全屏视频播放器（presign URL）
@@ -362,3 +363,8 @@ xcodebuild build \
 | 杀进程后重新登录 | Keychain 在无签名环境不可靠 | 加 UserDefaults 兜底 |
 | 视频无法播放 | AVURLAssetHTTPHeaderFieldsKey 非公开 API 不稳定 | 改用 presign URL |
 | 视频缩略图不显示 | 视频数据无法 UIImage(data:) 解析 | 视频用占位图标替代 |
+| 装备"全部"显示所有装备 | fetchEquipment 未按大类筛选 | 添加 styleTag 参数 |
+| 新建装备后不显示 | styleTags 保存为 nil，筛选匹配不到 | 保存时设置 styleTags |
+| 装备删除弹窗一闪而过 | NavigationLink 内 .alert 冲突 | alert 移到列表层级 |
+| 编辑出行后列表不刷新 | CoreData 对象引用不变，SwiftUI 不重绘 | TripCardView 改 @ObservedObject + 监听 CoreData 保存通知 |
+| 渔获尾数显示不对 | trip.catches?.count 统计记录条数而非鱼总数 | 改为 reduce 累加 count 字段 |

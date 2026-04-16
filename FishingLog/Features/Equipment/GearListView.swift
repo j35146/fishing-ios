@@ -4,6 +4,8 @@ struct GearListView: View {
     @StateObject private var vm = GearListViewModel()
     @State private var showNewEquipment = false
     @State private var editingEquipment: Equipment?
+    @State private var showDeleteAlert = false
+    @State private var deletingEquipmentId: String?
 
     var body: some View {
         NavigationStack {
@@ -81,7 +83,10 @@ struct GearListView: View {
                                 } label: {
                                     GearCardView(item: item,
                                                  onEdit: { editingEquipment = item },
-                                                 onDelete: { Task { await vm.deleteEquipment(id: item.id) } })
+                                                 onDelete: {
+                                                    deletingEquipmentId = item.id
+                                                    showDeleteAlert = true
+                                                 })
                                 }
                                 .listRowBackground(Color.appBackground)
                                 .listRowSeparator(.hidden)
@@ -114,6 +119,16 @@ struct GearListView: View {
                 EditEquipmentView(item: item, categories: vm.categories) {
                     Task { await vm.refresh() }
                 }
+            }
+            .alert("确认删除", isPresented: $showDeleteAlert) {
+                Button("删除", role: .destructive) {
+                    if let id = deletingEquipmentId {
+                        Task { await vm.deleteEquipment(id: id) }
+                    }
+                }
+                Button("取消", role: .cancel) {}
+            } message: {
+                Text("确认删除此装备？已被出行引用的装备无法删除。")
             }
         }
         .task { await vm.refresh() }

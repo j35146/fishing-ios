@@ -5,6 +5,7 @@ struct TripDetailView: View {
     @StateObject private var vm: TripDetailViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var showDeleteAlert = false
+    @State private var showEdit = false
 
     private let dateFmt: DateFormatter = {
         let f = DateFormatter(); f.dateStyle = .long; f.locale = Locale(identifier: "zh_CN"); return f
@@ -127,6 +128,9 @@ struct TripDetailView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
+                    Button { showEdit = true } label: {
+                        Label("编辑出行", systemImage: "pencil")
+                    }
                     Button(role: .destructive) { showDeleteAlert = true } label: {
                         Label("删除出行", systemImage: "trash")
                     }
@@ -145,6 +149,12 @@ struct TripDetailView: View {
             Button("取消", role: .cancel) {}
         } message: {
             Text("删除后无法恢复，确认删除此次出行记录？")
+        }
+        .sheet(isPresented: $showEdit) {
+            EditTripView(trip: vm.trip) {
+                // 编辑保存后刷新详情
+                vm.catches = CoreDataManager.shared.fetchCatches(for: vm.trip)
+            }
         }
     }
 

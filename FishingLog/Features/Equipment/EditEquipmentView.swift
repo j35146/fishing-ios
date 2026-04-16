@@ -183,7 +183,7 @@ struct EditEquipmentView: View {
             brand: brand.isEmpty ? nil : brand,
             model: modelName.isEmpty ? nil : modelName,
             categoryId: selectedCategoryId,
-            styleTags: nil,
+            styleTags: [selectedGroup.styleTag],
             status: status,
             purchaseDate: hasPurchaseDate ? fmt.string(from: purchaseDate) : nil,
             purchasePrice: Double(priceText),
